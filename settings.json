@@ -1,0 +1,18 @@
+{
+   "token" : 
+    { 
+        "bearer_token" : "",
+        "consumer_key" : "",
+        "consumer_secret" : "",
+        "access_token" : "",
+        "access_token_secret" : ""
+    },
+
+    "bot-settings" : 
+    {
+        "chrome-driver-path" : "",
+        "time_interval" : 0,
+        "targetJSON_file" : "targetuser.json",
+        "in_reply_tweet" : "This is a bot!"
+    }
+}
