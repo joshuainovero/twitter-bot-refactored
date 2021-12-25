@@ -88,5 +88,5 @@ while True:
     except:
         print('Reloading scraper')
         scraper.close()
-        scraper = webdriver.Chrome('chromedriver.exe', options=op)
+        scraper = webdriver.Chrome(settings['bot-settings']['chrome-driver-path'], options=op)
     
