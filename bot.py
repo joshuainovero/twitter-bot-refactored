@@ -6,6 +6,7 @@ from selenium.common.exceptions import TimeoutException
 import tweepy
 import json
 import time
+import os
 
 settings = json.load(open('settings.json'))
 
@@ -43,8 +44,17 @@ if not tempTarget['cache']['finished_id']:
     with open(str(targetJSON_file), 'w') as file:
         json.dump(tempTarget, file, indent = 4)
 
+count = 0
+clear__ = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
+
 while True:
     try:
+        if count == 30:
+            print('Clearing console...')
+            clear__()
+            count = 0
+        count += 1
+
         scraper.get(str(targetTwitterProfile))
         time.sleep(time_interval)
         print('scrapping...')
